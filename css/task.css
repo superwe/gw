@@ -1,0 +1,40 @@
+.acceptbutton {background: -moz-linear-gradient(center top , #32A8E6, #2C8DAE) repeat scroll 0 0 transparent; border: 1px solid #2D98D8; color: #FFFFFF; width: 70px; border-radius: 5px 5px 5px 5px;}
+.refusebutton {background: -moz-linear-gradient(center top , #FCFCFC, #EEEEEE) repeat scroll 0 0 transparent; border: 1px solid #DFE0E2;border-radius: 5px 5px 5px 5px; box-shadow: 0 -1px 0 #FFFFFF inset; color: #767676; width:50px;}
+.opbutton { float: right; margin-top: -10px; padding-right: 20px;}
+
+.task_sec_title {
+    background: -moz-linear-gradient(center top , #FFFFFF, #E5E5E5) repeat scroll 0 0 transparent;
+    color: #767676;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+    width:820px;
+    float: left;
+}
+.task_sec_title a.selected {
+    color: #0177B5;
+    font-weight: bold;
+}
+.task_sec_title a {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    margin: 0 10px;
+}
+.task mark {
+    background: none repeat scroll 0 0 #BBBBBB;
+    border: 1px solid #F2F2F2;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 80px;
+}
+.task mark.cur {
+    background: none repeat scroll 0 0 #75C0EB;
+}
+.tkBox a{padding: 0; width: 70px;}

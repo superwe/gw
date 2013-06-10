@@ -1,0 +1,306 @@
+/*
+ * Linkselect "select" style CSS file
+ */
+a.selectbox-link,
+span.selectbox-disabled {
+	display: block;
+	background-color: #fff;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
+	background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%);
+	background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
+	background-image: -o-linear-gradient(top, #eeeeee 0%,#ffffff 50%);
+	background-image: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
+	background-image: linear-gradient(top, #eeeeee 0%,#ffffff 50%);
+	-webkit-border-radius: 4px;
+	-moz-border-radius   : 4px;
+	border-radius        : 4px;
+	-moz-background-clip   : padding;
+	-webkit-background-clip: padding-box;
+	background-clip        : padding-box;
+	border: 1px solid #aaa;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	_width: 325px;
+	max-width: 325px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 0 0 8px;
+	color: #444 /*|!important|*/;
+	text-decoration: none;
+	
+	outline: 0 !important;
+
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
+
+a.selectbox-link span.selectbox-link-text,
+span.selectbox-disabled span.selectbox-link-text {
+	display: block;
+	margin-right: 26px;
+	overflow: hidden;
+}
+
+a.selectbox-link span.selectbox-link-icon,
+span.selectbox-disabled span.selectbox-link-icon {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius   : 0 4px 4px 0;
+  border-radius        : 0 4px 4px 0;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  background: #ccc;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
+  background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+  background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+  background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%);
+  background-image: -ms-linear-gradient(top, #cccccc 0%,#eeeeee 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 );
+  background-image: linear-gradient(top, #cccccc 0%,#eeeeee 60%);
+  border-left: 1px solid #aaa;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 18px;
+}
+
+a.selectbox-link span.selectbox-link-icon span,
+span.selectbox-disabled span.selectbox-link-icon span {
+	background: url("./dropdown.png") no-repeat 3px 4px transparent;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* this can be used to support IE8+, Firefox & WebKit
+a.selectbox-link span.selectbox-link-icon span:after,
+span.selectbox-disabled span.selectbox-link-icon span:after {
+  display: block;
+	position: absolute;
+	top: 1px;
+	left: 4px;
+
+	content: '\025BC';
+	color: #888;
+	font-size: 9px;
+}
+*/
+
+a.selectbox-link:hover,
+a.selectbox-link-focus {
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
+  -o-box-shadow     : 0 0 5px rgba(0,0,0,.3);
+  box-shadow        : 0 0 5px rgba(0,0,0,.3);
+  border: 1px solid #5897fb;
+
+	outline: 0; /* prevent the link from being outlined */
+}
+
+a.selectbox-link-open {
+	outline: 0; /* prevent the link from being outlined */
+/*
+	z-index: 1000;
+*/
+
+	border: 1px solid #aaa;
+	-webkit-box-shadow: 0 1px 0 #fff inset;
+	-moz-box-shadow   : 0 1px 0 #fff inset;
+	-o-box-shadow     : 0 1px 0 #fff inset;
+	box-shadow        : 0 1px 0 #fff inset;
+	background-color: #eee;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
+	background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+	background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+	background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
+	background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+	background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+	-webkit-border-bottom-left-radius : 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-bottomleft : 0;
+	-moz-border-radius-bottomright: 0;
+	border-bottom-left-radius : 0;
+	border-bottom-right-radius: 0;
+	/* fix bottom border */
+	border-bottom: 0;
+	padding-bottom: 1px;
+}
+
+a.selectbox-link-open:hover {
+	-webkit-box-shadow: 0 1px 0 #fff inset;
+	-moz-box-shadow   : 0 1px 0 #fff inset;
+	-o-box-shadow     : 0 1px 0 #fff inset;
+	box-shadow        : 0 1px 0 #fff inset;
+  border-color: #aaa;
+	border-bottom: 0;
+}
+
+a.selectbox-link-open span.selectbox-link-icon {
+	-webkit-box-shadow: 0 1px 0 #fff inset;
+	-moz-box-shadow   : 0 1px 0 #fff inset;
+	-o-box-shadow     : 0 1px 0 #fff inset;
+	box-shadow        : 0 1px 0 #fff inset;
+
+	background-color: #eee;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
+	background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+	background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+	background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
+	background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+	background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+  border-left: none;
+}
+
+a.selectbox-link-open span.selectbox-link-icon span {
+  background-position: -36px 4px;
+}
+
+/* this can be used to support IE8+, Firefox & WebKit
+a.selectbox-link-open span.selectbox-link-icon span:after {
+	content: '\025B2';
+}
+*/
+
+span.selectbox-disabled {
+	cursor: not-allowed;
+	filter: alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
+
+.selectbox-container {
+	position: absolute;
+	/* this is required to correctly calculate the width of the container */
+	left: 0; top: 0;
+	display: none;
+	z-index: 50000;
+	/* 
+	 * move the box to align with bottom of input box 
+	 */
+	margin-top: 26px;
+	max-width: 325px;
+	
+	padding: 4px;
+
+	background: #fff;
+	border: 1px solid #aaa;
+/*
+	border-top: 0;
+*/
+	top: 29px;
+	left: 0;
+	-webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
+	-moz-box-shadow   : 0 4px 5px rgba(0,0,0,.15);
+	-o-box-shadow     : 0 4px 5px rgba(0,0,0,.15);
+	box-shadow        : 0 4px 5px rgba(0,0,0,.15);
+	z-index: 999;
+
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius   : 0 0 4px 4px;
+  border-radius        : 0 0 4px 4px;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+}
+
+.selectbox-container .selectbox-title {
+	position: absolute;
+	right: 0;
+	top: -25px;
+	z-index: 1001;
+	cursor: pointer;
+
+	background-color: #eee;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
+	background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+	background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
+	background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
+	background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
+	background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%);
+
+	color: #444 !important;
+
+	white-space: nowrap;
+	display: block;
+  line-height: 1.2em;
+	padding: 0;
+  margin: 0 18px 0 0;
+
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
+
+.selectbox-container .selectbox-title span {
+	display: block;
+  padding: 4px 0;
+}
+
+.selectbox-container .selectbox-scrollable {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	overflow: auto;
+	max-height: 250px;
+	clear: both;
+}
+
+.selectbox-container ul {
+	list-style-type: decimal !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+.selectbox-container ul li.selectbox-selected { 
+	background-color: #224782;
+	color: #fff;
+}
+
+.selectbox-container ul li.selectbox-current { 
+	background-color: #3875d7;
+	color: #fff;
+}
+
+.selectbox-container ul li {
+	display: block;
+  line-height: 1.2em;
+  padding: 5px 7px;
+  margin: 0;
+  list-style: none;
+	color: #444;
+
+	font-size: 13px;
+
+	cursor: pointer;
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
+
+/* fixes for IE6; allows mouseovers beyond text label */
+.selectbox-container ul li span { zoom:1; }
+
+
+/* fixes for IE7; allows clicking beyond text label */
+a.selectbox-link { zoom:1; }

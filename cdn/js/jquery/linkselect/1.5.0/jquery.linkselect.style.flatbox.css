@@ -1,0 +1,216 @@
+/*
+ * Linkselect "flatbox" style CSS file
+ */
+a.flatbox-link,
+span.flatbox-disabled {
+	display: block;
+	background-color: #fff;
+	-webkit-border-radius: 4px;
+	-webkit-background-clip: padding-box;
+	background-clip        : padding-box;
+	border: 1px solid #aaa;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	_width: 325px;
+	max-width: 325px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 0 0 8px;
+	color: #444 /*|!important|*/;
+	text-decoration: none;	
+	outline: 0 !important;
+	-khtml-user-select: none;
+	-o-user-select: none;
+}
+
+a.flatbox-link span.flatbox-link-text,
+span.flatbox-disabled span.flatbox-link-text {
+	display: block;
+	margin-right: 26px;
+	overflow: hidden;
+}
+
+a.flatbox-link span.flatbox-link-icon,
+span.flatbox-disabled span.flatbox-link-icon {
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius        : 0 4px 4px 0;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  background: #ccc;
+  border-left: 1px solid #aaa;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 18px;
+}
+
+a.flatbox-link span.flatbox-link-icon span,
+span.flatbox-disabled span.flatbox-link-icon span {
+	background: url("./dropdown.png") no-repeat 3px 4px transparent;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a.flatbox-link:hover,
+a.flatbox-link-focus {
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+    border: 1px solid #5897fb;
+
+    outline: 0; /* prevent the link from being outlined */
+}
+
+a.flatbox-link-open {
+	outline: 0; /* prevent the link from being outlined */
+/*
+	z-index: 1000;
+*/
+
+	border: 1px solid #aaa;
+	-webkit-box-shadow: 0 1px 0 #fff inset;
+	background-color: #eee;
+	-webkit-border-bottom-left-radius : 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-left-radius : 0;
+	border-bottom-right-radius: 0;
+	/* fix bottom border */
+	border-bottom: 0;
+	padding-bottom: 1px;
+}
+
+a.flatbox-link-open:hover {
+	-webkit-box-shadow: 0 1px 0 #fff inset;
+	border-color: #aaa;
+	border-bottom: 0;
+}
+
+a.flatbox-link-open span.flatbox-link-icon {
+	-webkit-box-shadow: 0 1px 0 #fff inset;	
+
+	background-color: #eee;
+	border-left: none;
+}
+
+a.flatbox-link-open span.flatbox-link-icon span {
+    background-position: -36px 4px;
+}
+
+/* this can be used to support IE8+, Firefox & WebKit
+a.flatbox-link-open span.flatbox-link-icon span:after {
+	content: '\025B2';
+}
+*/
+
+span.flatbox-disabled {
+	cursor: not-allowed;
+	filter: alpha(opacity=75);
+	opacity: 0.75;
+
+	-khtml-user-select: none;
+	-o-user-select: none;
+}
+
+.flatbox-container {
+	position: absolute;
+	/* this is required to correctly calculate the width of the container */
+	left: 0; top: 0;
+	display: none;
+	z-index: 50000;
+	/* 
+	 * move the box to align with bottom of input box 
+	 */
+	margin-top: 26px;
+	max-width: 325px;
+	
+	padding: 4px;
+
+	background: #fff;
+	border: 1px solid #aaa;
+/*
+	border-top: 0;
+*/
+	top: 29px;
+	left: 0;
+	-webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
+	z-index: 999;
+
+  -webkit-border-radius: 0 0 4px 4px;
+  -webkit-background-clip: padding-box;
+}
+
+.flatbox-container .flatbox-title {
+	position: absolute;
+	right: 0;
+	top: -25px;
+	z-index: 1001;
+	cursor: pointer;
+
+	background-color: #eee;
+
+	color: #444 !important;
+
+	white-space: nowrap;
+	display: block;
+  line-height: 1.2em;
+	padding: 0;
+  margin: 0 18px 0 0;
+
+	-khtml-user-select: none;
+	-o-user-select: none;
+}
+
+.flatbox-container .flatbox-title span {
+	display: block;
+    padding: 4px 0;
+}
+
+.flatbox-container .flatbox-scrollable {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	overflow: auto;
+	max-height: 250px;
+	clear: both;
+}
+
+.flatbox-container ul {
+	list-style-type: decimal !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+.flatbox-container ul li.flatbox-selected { 
+	background-color: #224782;
+	color: #fff;
+}
+
+.flatbox-container ul li.flatbox-current { 
+	background-color: #3875d7;
+	color: #fff;
+}
+
+.flatbox-container ul li {
+	display: block;
+  line-height: 1.2em;
+  padding: 5px 7px;
+  margin: 0;
+  list-style: none;
+	color: #444;
+
+	font-size: 13px;
+
+	cursor: pointer;
+	-khtml-user-select: none;
+	-o-user-select: none;	
+}
+
+/* fixes for IE6; allows mouseovers beyond text label */
+.flatbox-container ul li span { zoom:1; }
+
+
+/* fixes for IE7; allows clicking beyond text label */
+a.flatbox-link { zoom:1; }

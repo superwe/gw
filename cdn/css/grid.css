@@ -1,0 +1,83 @@
+/*自己补充width的值*/
+.container
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container .container{
+	margin: 0;
+	width: auto;
+	display: inline-block;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.grid{
+	display: inline;
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.push, .pull {
+	position: relative;
+}
+
+/* =Grid >> 14 Columns
+--------------------------------------------------------------------------------
+.container_14 .grid_1 {width: 70px;}
+*/
+
+/* =Prefix Extra Space >> 14 Columns
+--------------------------------------------------------------------------------
+.container_14 .prefix_1 {padding-left: 70px;}
+*/
+
+/* =Suffix Extra Space >> 14 Columns
+--------------------------------------------------------------------------------
+.container_14 .suffix_1 {padding-right: 70px;}
+*/
+
+/* `Push Space >> 14 Columns
+--------------------------------------------------------------------------------
+.container_14 .push_1 {left: 70px;}
+*/
+
+/* `Pull Space >> 14 Columns
+--------------------------------------------------------------------------------
+.container_14 .pull_1 {left: -70px;}
+*/
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after {
+	content: "\0020";
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix:after {
+	clear: both;
+}
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+	zoom: 1;
+}

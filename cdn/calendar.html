@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery/jquery-1.5.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/grid/960_12_70_10.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery/calendar/jquery.calendarpanel.css" />
+<script type="text/javascript">
+var fw = {};
+
+//历遍数组
+fw.each = function(a, cb){
+        for (var i=0,l=a.length; i<l; i++) a[i]=cb(a[i],i);
+        return a;
+}
+
+//获取某年某月的天数
+fw.getDays = function (y,m){
+        return m==2?(y%4||!(y%100)&&y%400?28:29):(/4|6|9|11/.test(m)?30:31);
+}
+
+//获取元素绝对位置
+fw.getXy = function (o){
+        for(var _pos={x:0,y:0};o;o=o.offsetParent){
+                _pos.x+=o.offsetLeft;
+                _pos.y+=o.offsetTop;
+        };
+        return _pos;
+}
+
+//两个元素对齐
+fw.align = function(o1, o2){
+        o2.style.left = o1.style.left;
+        o2.style.top = o1.style.top;
+        o2.style.width = o1.offsetWidth + "px";
+        o2.style.height = o1.offsetHeight + "px";
+}
+
+
+//日历类
+var fw_cal = function (me, id, cb){
+        this.me = me;
+        this.obj = document.getElementById(id);
+        this.cb = cb || Function();
+        !this.obj && this.addDiv();
+        this.week = fw.each('日一二三四五六'.split(''), function(s){return '<b>'+s+'</b>'});
+        this.up(new Date().getFullYear(), new Date().getMonth()+1);
+        return this;
+}
+
+
+//年月HTML
+fw_cal.prototype.ym = function(y, m, bn){
+        m==13 && (m=1,y++) || m==0 && (m=12,y--);
+        return '<b class="btn" onclick="'+this.me+'.up('+y+','+m+')">'+bn+'</b>';
+}
+
+//更新HTML
+fw_cal.prototype.up = function(y,m){
+        var me = this.me;
+        var ti = this.ym(y-1,m,"<<")+this.ym(y,m-1,"<")+'<b class="dateCap">'+y+'年'+m+'月</b>'+this.ym(y,m+1,">")+this.ym(y+1,m,">>");
+        var sp = Array(new Date(y+"/"+m+"/1").getDay()+1).join('<b> </b>');
+        var ds = fw.each(Array(fw.getDays(y,m)), function(s,i){
+			var strMonth=''+m;
+			if(m<10)
+				strMonth="0"+strMonth;			
+			var tmp=++i;
+			var strDate=''+tmp;
+			if(tmp<10)
+				strDate="0"+strDate;			
+			var strFullDate=y+'-'+strMonth+'-'+strDate;
+			return '<a date="'+[y,strMonth,strDate].join('-')+'" href="javascript:'+me+'.cb(\''+[y,strMonth,strDate].join('-')+'\');">'+i+'</a>';
+			//return '<a date="'+[y,m,++i].join('-')+'" href="javascript:'+me+'.cb(\''+[y,m,++i].join('-')+'\');">'+i+'</a>';
+			});
+        this.obj.innerHTML = [ti].concat(this.week).concat(sp).concat(ds).join("");
+}
+
+
+//动态添加层
+fw_cal.prototype.addDiv = function (){
+        var me = this;
+        this.ifr = document.createElement("iframe");
+        this.ifr.style.cssText = "position:absolute;display:none;width:0px;height:0px";
+        this.obj = document.createElement("div");
+        this.obj.className = "cal2";
+        this.obj.title='点击面板空白处关闭';
+        this.obj.style.cssText = "display:none;";
+        this.obj.onclick = function(e){(document.all||e.target==me.obj)&&me.hide()};
+        document.body.appendChild(this.ifr);
+        document.body.appendChild(this.obj);        
+        this.cb = this.select;
+}
+
+//绑定到控件中
+fw_cal.prototype.bind = function (id){
+        var me = this;
+        var obj = document.getElementById(id);
+        obj.onfocus = function(){me.show(this)};
+        return this;
+}
+
+//选中
+fw_cal.prototype.select = function (d){
+        this.input.value = d;
+        this.hide();
+}
+
+//显示
+fw_cal.prototype.show = function (obj){
+        this.input = obj;
+        var o = fw.getXy(obj);
+        this.obj.style.cssText = "display:''; left:"+o.x+"px; top:"+(o.y+obj.offsetHeight)+"px";
+        this.ifr.style.display = "";
+        document.all && fw.align(this.obj, this.ifr);
+}
+
+//隐藏
+fw_cal.prototype.hide = function (){
+        this.ifr.style.display = "none";
+        this.obj.style.display = "none";
+}
+	$(document).ready(function(e) {
+        $("#iCalendar>a").each(function(index, element) {
+			var bFound=false;
+			var targetDate=$(this).attr("date");
+			$("#dateplan>p").each(function() {	
+                if(targetDate==$(this).attr("date")){
+					bFound=true;
+				}				
+            });
+			if(bFound)
+				$(this).addClass("selected");
+        });
+    });
+
+</script>
+</head>
+
+<body>
+<div class="container_12 clearfix">
+	<div class="grid_5">
+    <div id="iCalendar" class="cal" style="height:260px;"></div>
+<script>var cal = new fw_cal("cal", "iCalendar", function(d){alert(d)});</script>
+	<div id="dateplan" style="margin-top:280px;">
+    <h3 style="font-size:14px; font-weight:bold;">最近课程安排</h3>
+    <p date="2012-09-01" style="line-height:3px;">2012-09-26&nbsp;&nbsp;14:00-15:00&nbsp;二次函数</p>
+    <p date="2012-09-26" style="line-height:3px;">2012-09-26&nbsp;&nbsp;14:00-15:00&nbsp;二次函数</p>
+    <p date="2012-09-26" style="line-height:3px;">2012-09-26&nbsp;&nbsp;18:00-19:00&nbsp;二次函数</p>
+    <p date="2012-09-26" style="line-height:3px;">2012-09-26&nbsp;&nbsp;21:00-22:00</p>
+    <p date="2012-09-27" style="line-height:3px;">2012-09-26&nbsp;&nbsp;14:00-15:00</p>
+    <p date="2012-09-27" style="line-height:3px;">2012-09-26&nbsp;&nbsp;16:00-17:00</p>    
+    </div>
+    </div>    
+</div>
+
+
+</body>
+</html>

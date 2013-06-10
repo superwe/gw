@@ -1,0 +1,411 @@
+/*重置代码开始*/
+html{
+    font-family: "arial,sans-serif";
+    font-size: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+    padding: 0;
+    margin: 0;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img,abbr,acronym{
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var{
+    font-weight: normal;
+    font-style: normal;
+}
+ol,ul{
+    list-style: none;
+}
+caption,th{
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size: 100%;
+}
+q:before,q:after{
+    content:'';
+}
+/*重置代码结束*/
+a:link,a:visited{
+    color: #0178B3;
+    cursor: pointer;
+    text-decoration: none;
+}
+.hidden{
+    display: none;
+}
+.floatL{
+    float:left;
+}
+.floatR{
+    float:right;
+}
+.font14{
+    font-size: 14px;
+}
+.button{
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
+}
+.blueButton{
+    background: #47A6E8;
+    border: 1px solid #3E93CE;
+    color: #FFFFFF;
+}
+.grayButton{
+    background: #F8F8F8;
+    border: 1px solid #CACACA;
+    color: #7A7A7A;
+}
+.descColor{
+    color: #0178B3;
+}
+.figure img{
+    width: 40px;
+    height: 40px;
+}
+
+.SignContainer{
+    font-family: arial,宋体;
+    background: #FFFFFF;
+    margin: 0 10px;
+    border: 1px solid #C7C7C7;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow:3px 3px 3px #b5b5b5;
+    position: relative;
+}
+div.signLeftContainer, div.signRightContent{
+    height: 680px;
+    overflow: hidden;
+}
+div.signLeftContainer{
+    width: 350px;
+    position:relative;
+    z-index:3;
+ }
+div.signRightContainer{
+    z-index: 2;
+    width: 100%;
+    position:absolute;
+    left:0;
+    overflow: hidden;
+}
+/**右侧内容区【首页地图、定时任务、定时任务详情页等】**/
+div.signRightContent{
+    position: relative;
+    margin-left:350px;
+    overflow: hidden;
+    width: 100%;
+}
+/**签到左侧**/
+/*左侧菜单*/
+div.signMenuContainer{
+    background:#F1F2F7;
+    height:50px;
+    line-height:50px;
+}
+div.signMenu{
+    width:150px;
+    padding: 0 0 0 4px;
+}
+div.signMenu h2{
+    background: #E9F2F9;
+    padding: 0 0 0 10px;
+    font-size:16px;
+    font-weight: normal;
+}
+/*下拉小箭头*/
+div.signMenu h2 span{
+    border-width: 6px;
+    border-style:solid;
+    border-color:#666666 #EDF7FD #F1F2F7;
+    font-size:0;
+    width:0;
+    height:0;
+    line-height:0;
+    position: relative;
+    left:6px;
+    top:-2px;
+}
+ul.signMenuUl{
+    background: #FFFFFF;
+    border: 1px solid #649EBB;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 2px 2px 2px #E3E3E3;
+    width: 117px;
+    position: absolute;
+}
+ul.signMenuUl li{
+    width: 117px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+ul.signMenuUl li:hover{
+    background: #E9F2F9;
+}
+div.signMenuContainer a.signShare{
+    height: 17px;
+    width: 17px;
+    overflow: hidden;
+    margin: 16px 5px 16px 0;
+    background: url("../images/sign/sign_ico.png") no-repeat 0 0;
+}
+/*签到左侧搜索框*/
+div.signSearchContainer{
+    border: 1px solid #DCDCDC;
+    background: #F2F2F2;
+    height: 46px;
+}
+div.signSearchContainer label{
+    float: right;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px 0 0;
+}
+div.signSearchContainer label input{
+    vertical-align: middle;
+}
+div.employeeContainer{
+    background: #FFFFFF;
+    width: 250px;
+    margin:8px 0 0 5px;
+
+}
+a.selectEmployee{
+    width: 28px;
+    height: 28px;
+    background: #FFFFFF url("../images/sign/op_ico.png") no-repeat 0 -447px;
+}
+div.signSearchOp{
+    background: #4eaff1;
+    background: -moz-linear-gradient(center top , #4EAFF1, #3691D1) repeat scroll;
+    border:1px solid #3E93CE;
+    border-radius: 4px;
+    height: 28px;
+    margin:9px 0 9px 10px;
+    width: 75px;
+    text-align: center;
+}
+a.signSearchBtn{
+    border-right: 1px solid #7DBFEE;
+    color: #ffffff;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+    line-height: 28px;
+}
+a.signSearchBox{
+    width: 21px;
+    height: 28px;
+}
+span.searchNav{
+    border: 5px solid;
+    border-color: #F0F0F0 transparent transparent;
+    display: inline-block;
+}
+div.noSignInfo{
+    text-align: center;
+    font-size: 14px;
+    padding:10px 0;
+    border-bottom:1px solid #F0F0F0;
+}
+/**签到左侧列表**/
+ul.signListUl li{
+    border-bottom: 1px solid #F0F0F0;
+    clear:both;
+    height: 40px;
+    padding:5px 0 5px 14px;
+    line-height: 40px;
+}
+ul.signListUl li.cur{
+    background: #FFFED5;
+}
+ul.signListUl .signIco{
+    background: url("../images/sign/sign_locate.png") no-repeat;
+    color: #ffffff;
+    width: 21px;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+}
+ul.signListUl .signRed{
+    background-position: 2px -1px;
+
+}
+ul.signListUl .signBlue{
+    background-position: 1px -64px;
+}
+ul.signListUl .figure{
+    width: 55px;
+    padding: 0 0 0 6px;
+}
+ul.signListUl .signDesc{
+    width: 250px;
+    line-height:21px;
+
+    overflow: hidden;
+}
+/*签到左侧分页*/
+.signPageContainer{
+    text-align: center;
+    height: 45px;
+    margin:10px 4px;
+}
+/*右侧地图浮层*/
+.mapLayer{
+    height: 70px;
+    width: 220px;
+}
+.mapLayer .employeeInfo{
+    overflow: hidden;
+    line-height: 24px;
+}
+.mapLayer .avatar{
+    width: 40px;
+    overflow: hidden;
+}
+.mapLayer .avatar p{
+    margin:0;
+    padding:0;
+}
+.mapLayer .avatar img{
+    width: 40px;
+    height: 40px;
+}
+.mapLayer .address{
+    width:170px;
+    padding: 0 0 0 4px;
+}
+.mapLayer .signTime{
+    margin:10px 0 0 0;
+}
+
+/**************弹出框**************/
+div.boxContainer{
+    background: #FFFFFF;
+    height: auto;
+}
+div.boxContainerTitle{
+    background: #EDEDED;
+    color: #767676;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding:0 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+div.boxContainerTitle a.close{
+    background: url("../images/sign/new_spr.png") no-repeat  0 -1024px;
+    height: 40px;
+    width: 15px;
+}
+div.boxShareContent{
+    color: #333333;
+    padding: 5px 10px;
+}
+ul.boxShareUl{
+    border: 1px solid #FFFFFF;
+}
+ul.boxShareUl li{
+    float: left;
+    display: inline-block;
+    height: 40px;
+    margin: 6px 0;
+    text-align: left;
+    width: 170px;
+}
+.figure img{
+    float: left;
+    margin-right: 8px;
+}
+div.boxContainer div.searchContainer{
+    font-size: 14px;
+    padding: 10px 10px;
+    line-height: 28px;
+}
+div.searchContainer select{
+    border: 1px solid #3C7FB1;
+    height: auto;
+    padding: 0;
+}
+div.searchContainer div.searchCol{
+    padding:5px 0;
+}
+div.searchContainer div.taskList{
+    background: #F7F7F7;
+    font-size:12px;
+    max-height: 100px;
+    overflow-y: auto;
+    padding:4px 0;
+}
+div.searchContainer ul.taskListUl li{
+    float: left;
+    width: 140px;
+    overflow: hidden;
+    padding:0 6px;
+}
+div.searchContainer ul.taskListUl li input{
+    vertical-align: middle;
+}
+/**************弹出框**************/
+
+/***************定时任务页面*****************/
+span.taskStatus{
+    color: #F6B37F;
+}
+table.signRightTab{
+    border:solid #b7b7b7;
+    border-width:1px 1px 0 1px;
+    width:74%;
+    margin: 0 7px 0 7px;
+}
+table.signRightTab caption{
+    background: #F1F2F7;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+.excel{
+    background: #F1F2F7 url("../images/sign/sign_ico.png") no-repeat -50px -205px;
+    float: right;
+    width: 43px;
+    height: 35px;
+    line-height: 35px;
+    margin: 6px 10px 0 0;
+}
+table.signRightTab th{
+    height:40px;
+    line-height:40px;
+    background:#dbdbdb;
+    border:solid #b7b7b7;
+    border-width:0 1px 1px 0;
+    text-align: center;
+}
+table.signRightTab td{
+    line-height:35px;
+    border-bottom:1px solid #b7b7b7;
+    padding:0 0 0 6px;
+}
+table.signRightTab input.employeeId{
+    margin-left:2px;
+}
+tr:nth-child(even){
+    background:#e6e6e6;
+}
+div.taskRightPage{
+    width:74%;
+    margin: 20px 7px 0 7px;
+    text-align: center;
+}
+/***************定时任务页面*****************/

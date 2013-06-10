@@ -1,0 +1,52 @@
+img{border:0}
+a{color:#444; text-decoration:none}
+a:hover{color:#900; text-decoration:underline}
+.con{
+	overflow:hidden;  
+	width:100%; 
+	height:100%; 
+}
+#carousel_container{
+	position:relative; 
+	height:180px; 
+	overflow:hidden;
+}
+#carousel_inner{
+	width:100%; 
+	height:180px; 
+	overflow: hidden; 
+	position:absolute;
+	left:-20px; 
+	top:5px;}
+#left_scroll{
+	position: absolute;
+	left:0;
+	top:80px;
+	width:9px;
+	height:9px;
+	cursor: pointer;
+	cursor: hand; 
+	background:url(images/left.gif) no-repeat;
+}
+#right_scroll{
+	position: absolute;
+	top:80px;
+	right:0; 
+	width: 9px;
+	height: 9px;
+	cursor: pointer;
+	cursor: hand; 
+	background: url(images/right.gif) no-repeat;
+}
+#carousel_ul{
+	width:9999px; 
+	height:180px;
+	position:relative;
+}
+#carousel_ul li{
+	float: left;
+	width:190px; 
+	
+	margin-right:15px; 
+	display:inline;
+}

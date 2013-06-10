@@ -1,0 +1,351 @@
+@charset "utf-8";
+/***加上overflow:auto防止ie下在没有超出的情况下出现滚动条*/
+html,body{*overflow:hidden;}
+.calendar{
+    background: #ffffff;
+    width:100%;
+}
+.calendar .header{
+    height: 30px;
+    padding: 10px 0;
+    position: relative;
+}
+.calendar .header .app-title{
+    font-size: 22px;font-weight: normal;height: 30px;line-height: 30px;
+    position:absolute;margin-left: 60px;
+}
+.calendar .header .left-nav{
+    position: absolute;top: 10px;left: 200px;
+    height: 30px;line-height: 30px;
+}
+.calendar .header .left-nav .time{
+    float: left;font-size: 16px;
+}
+.calendar .header .left-nav .button-line{
+    float: left;
+}
+.calendar .header .right-nav{
+    position: absolute;top: 10px;right: 10px;
+}
+.calendar .main{
+    position: relative;
+    display: hidden;
+}
+.calendar .main .left{
+    position: absolute;top: 0;left: 0;
+    width: 180px;margin-left: 15px;
+}
+.calendar .main .left .mini-calendar{
+    display: block;width: 170px;height: 180px;
+}
+.calendar .main .left .yy-user-item{}
+.calendar .main .right{
+    height: 100%;
+}
+.calendar .main .right .right-main{
+    margin-left: 200px;
+    margin-right: 15px;
+}
+.calendar-dialog{
+    border: solid 1px #E1E3E5;
+    box-shadow: 1px 1px 5px #333333;
+}
+
+/*日历head*/
+.riliHeader{background:#E9EDF0;padding:5px 0; line-height:25px; z-index:1; position:relative;}
+.p20{padding:20px;}
+.curXsj{border:5px solid #767676;border-color: #0078B3 #F2F2F2 #F2F2F2 #F2F2F2;}
+
+.leftsj{border:5px solid #767676;border-color:#F6F6F6 #767676 #F6F6F6 #F6F6F6;display:inline-block;}
+.rightsj{border:5px solid #767676;border-color: #F6F6F6 #F6F6F6 #F6F6F6 #767676;display:inline-block;}
+.rlRightHead{padding:20px 0;}
+.rlRightHead .sj{margin:8px 0 0 0}
+.rlRightHead .w25{width:20px;padding:0 10px 0 0;display:inline-block;height:25px;}
+.rlRightHead .w30{width:20px;padding:0 0px 0 10px;display:inline-block;border-left:1px solid #CFCFCF;height:25px;}
+.rlRightHead .w40{width:40px;display:inline-block;}
+.rlRightHead .mid{border-left:1px solid #CFCFCF;border-right:1px solid #CFCFCF;display:inline-block;}
+.rlRightHead time{display:inline-block;line-height:25px;margin:0 0 0 30px;}
+.riliSearch{width:222px;height:28px;border-radius:3px;
+    background: #F7F7F7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FDFDFD), to(#EFEFEF));
+    background: -moz-linear-gradient(top, #FDFDFD, #EFEFEF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FDFDFD', endColorstr='#EFEFEF');
+}
+/*日历left*/
+.rlButton{display:inline-block;
+    background: #F6F6F6;color:#767676;border:1px solid #CFCFCF;font-size:12px;font-weight:bold;height:22px;line-height:22px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#EFEFEF));
+    background: -moz-linear-gradient(top,  #FEFEFE,  #EFEFEF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFEFE', endColorstr='#EFEFEF');}
+.rlButton a.cur, .rlButton a:hover{background:#157EB5;color:#fff;}
+.rlButton a:hover .leftsj{border-color:#157EB5 #fff #157EB5 #157EB5;}
+.rlButton a:hover .rightsj{border-color: #157EB5 #157EB5 #157EB5 #fff;}
+.w65{width:65px;}
+.riliLeft{text-align:left;margin:0 0 10px 10px; position:absolute; left:0; top:137px;}
+.myRiliHead .tkBox{width:120px;padding:5px 0;top:19px;z-index:1;}
+.myRiliHead .tkBox a:hover{background:#B5D5EE;text-decoration:none;}
+.myRiliHead .xsj{border:5px solid #767676;border-color: #767676 #F9F9F9 #F9F9F9  #F9F9F9 ;}
+.myRiliHead .tkBox a{display:block;line-height:22px;padding:0 10px;}
+.groupDocBox .xsj{border:5px solid #A9A9A9;border-color:#B6B5B5 #F9F9F9 #F9F9F9 #F9F9F9;margin:5px;}
+.groupDocBox .tkBox a{display:block;padding:0 0 0 25px}
+.groupDocBox .tkBox a:hover{background-color:#B5D4F0;text-decoration:none}
+.groupDocBox a.cur{background-position:-15px -577px;width:25px;height:23px;display:inline-block;position:absolute;z-index:2;border-bottom:none;}
+.myRiliCont{margin-bottom:10px}
+.myRiliCont a{display:block;line-height:22px;padding:4px 10px;border-bottom:1px solid #E7E7E8;}
+.myRiliCont a:hover ,.myRiliCont .cur{background:url(../images/spr_ico.gif) #E6E6E6 no-repeat left -1695px;text-decoration:none;}
+.myRiliCont .clo{ padding:0 5px;}
+.rlDongtai{line-height:22px;}
+.icoSuoding,.icoQxSuoding{background-position:-27px -1736px;width:10px;height:10px;line-height:10px;display:inline-block;margin:5px 0 0 0}
+.icoQxSuoding{background-position:-27px -1767px;}
+.rlDongtai{border-bottom:1px solid #E7E7E8;padding:5px 0px;}
+.herRiliHead .addMenTk,.myRiliHead .selectTk{border:1px solid #B2B2B2;box-shadow:2px 1px 3px #ddd;border-radius:0 3px 3px 3px;top:40px;left:50px;}
+.rlTkHead{border-bottom:1px solid #b2b2b2; height:24px;}
+.rlTkHead a{border-top:1px solid #B2B2B2; border-left:1px solid #B2B2B2; border-right:1px solid #B2B2B2;background:#f9f9f9;border-radius:5px 5px 0 0;width:120px;height:23px;line-height:23px;display:inline-block;text-align:center; position: absolute; color:#b6b5b5;}
+.rlTkHead a:hover{ text-decoration:none;}
+.rlTkHead a.leftTab{ left:0px; top:0;}
+.rlTkHead a.rightTab{ left:130px; top:0;}
+.rlTkHead a.cur{ top:0; height:24px; line-height:24px; color:#0178b3; background-color:#fff;}
+.moreRili .tkBox{width:200px;padding:10px;height:330px;overflow-y:scroll;top:-310px;left:100px;z-index:1;}
+.moreRili a.cur{border:1px solid #B2B2B2; border-right:none; border-radius:5px 0 0 5px; background:#fff;display:inline-block;width:100px;height:30px;line-height:30px;text-align:center; position:relative; z-index:2;}
+.icoRi{display:inline-block;width:15px;height:15px;margin:0 0 0 2px}
+.tkCont .inputBox{width:50px;height:20px;line-height:20px;}
+.myRiliHead .groupTk{width:300px;}
+.myRiliHead .tkCont input{vertical-align:middle;}
+
+/*周历right*/
+.riliTable{background:#fff;border:none;width:100%;table-layout:fixed;}
+.riliTable th{border:1px solid #D6D6D6;background:#fff;padding:5px;text-align:right;color:#B6B5B5}
+.riliTable th.alignLeft{text-align:center;}
+.riliTable td,
+.zhouliTable td{border:1px solid #D6D6D6;background:#fff;border-bottom:none; padding: 5px 0;text-align:left;vertical-align:middle;}
+.riliTable span {font-size:22px;font-family:\5fae\8f6f\96c5\9ed1;color:#767676;padding: 0 5px 0 0;}
+.riliTable .blueBg,
+.riliTable .yeBg{line-height:24px;}
+.riliTable .today{font-size:22px;font-family:\5fae\8f6f\96c5\9ed1;color:#767676}
+
+.zhouliTable td{border:1px solid #D6D6D6;background:#fff;}
+.blueBg,.yeBg,.orangeBg,.greenBg,.redBg{ height:24px;line-height:18px;text-indent:3px;}
+.blueBg{background-color:#bcd3fc;}
+.yeBg{background-color:#fbe693;}
+.orangeBg{background-color:#fdb67d;}
+.greenBg{background-color:#b6d592;}
+.redBg{background-color:#ff9177;}
+.borderFff{ border:1px solid #fff;}
+.borderBlue{ border:1px solid #0177b5;}
+
+
+.zhouli{overflow-y:scroll;margin:0 5px 0 0 ;}
+.zhouliTable{ min-width:800px; table-layout:fixed;}
+.riliLine{background:url(../images/riliLine.gif) repeat-y 30px -25px; height:49px;background-color:#fff;}
+.riliLine li{height:47px;padding:2px 0 0 5px; width:60px;}
+.riliBox table{ margin:0; table-layout:fixed;}
+.riliBox .day{ height:24px;}
+.riliBox .top{ border-bottom:1px dotted #d6d6d6;}
+.riliBox .cbrd{ overflow:hidden;}
+.riliBox .cbrd dt{ white-space:nowrap; word-break:break-all; overflow:hidden; height:18px; line-height:18px;}
+.zhouliTable ul .day{ position:relative;}
+.zhouliTable ul .day .cur{ height:47px; border:1px solid #fff; background-color:#a0c2fa; position:absolute; left:0; top:0; width:97%; z-index:9; opacity:0.7; filter:alpha(opacity=70);}
+.zhouliTable ul .day .cur dl dt{ padding:5px;}
+.zhouliTable ul .day .con dl{position:absolute; left:0; top:0; z-index:9; padding:3px;}
+.zhouliTable ul .day .con dl dt{ overflow:hidden; white-space:nowrap;}
+.zhouliTable ul .day .con .drag{ cursor:n-resize;}
+.rili_greyBox{ width:570px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; background-color:#fff; -moz-box-shadow:1px 1px 5px #333333; -webkit-box-shadow:1px 1px 5px #333333; box-shadow:1px 1px 5px #333333;z-index:99; position:relative;border:1px solid #d6d6d6 \9;}
+.rili_greyBox .tit{ height:26px; line-height:26px; background-color:#e9e9e9; -moz-border-radius:6px 6px 0 0; -webkit-border-radius:6px 6px 0 0; border-radius:6px 6px 0 0;}
+.rili_greyBox .tit h3{ font-weight:normal; padding-left:20px;}
+.rili_greyBox .tit span{ padding:8px 20px 0 0; cursor:pointer;}
+.rili_greyBox .con{ padding:20px;}
+.rili_greyBox .rcSelect select{border:1px solid #DCDCDC;border-radius:5px;box-shadow:0 1px 0 #F8F8F8 inset;height:26px;padding:2px 0;line-height:26px;vertical-align:middle;margin-right:5px;color:#333;}
+.rili_greyBox .arrow_down{ width:20px; height:12px; background:url(../images/rili_arrow_down.png) no-repeat; position:absolute; bottom:-12px; left:45%;}
+.rili_none{ border:none !important; background-color:#f2f2f2 !important; width:22px; width:5px\ 9; _width:5px;}
+.riliSearch a.xsj {display: inline-block; padding-right: 15px;background:url(../images/rili_icon.gif) no-repeat 31px 9px;}
+
+.calendar-main{}
+.calendar-main table{table-layout:fixed;width:100%;}
+.calendar-main .rili_newrc{background-color:#fff; border:1px solid #d6d6d6;}
+.calendar-main .rili_edit dd{ padding-top:10px;}
+
+/*月历right*/
+.calendar-main .yueliTable{ background:#fff;}
+.calendar-main .yueliTable td{ border:1px solid #d6d6d6;vertical-align:top; text-align:left;}
+.calendar-main .yueliTable .title{ text-align:left; padding:3px;}
+.calendar-main .yueliTable .title_sy{ text-align:left; padding:3px; color:#b6b5b5;}
+.calendar-main .yueliTable .rc{ color:#0178b2}
+.rc {height:24px; line-height:24px; text-indent:3px;}
+.calendar-main .yueliTable .rw{ color:#dd9a01;}
+.calendar-main .yueliTable .more{ color:#b6b5b5;}
+.calendar-main .yueliTable .cls li{ line-height:24px;}
+.calendar-main .yueliTable .cls p03{ padding:0 3px;}
+.calendar-main .yueliTable .header{background:#e6e6e6; height:20px; border:1px solid #d6d6d6;border-bottom:none;padding: 0;vertical-align: middle;font-weight: normal;}
+.calendar-main .yueliTable .open{ left:-1px; top:-1px; background-color:#f6f6f6; border:1px solid #84bcd7; width:100%;}
+
+/********************/
+.yy-calendar-main-grid, .yy-calendar-main-edit{position:static;}relative
+.yy-calendar-main-edit{overflow-x:hidden;overflow-y:auto;}
+.yy-calendar-content .absolute{cursor:pointer;}
+.yy-calendar-task .yy-calendar-task-line,.more-task .yy-calendar-task-line{display: block;height: 100%;line-height: 1.7;overflow:hidden;font-size:12px;font-family:Arial,sans-serif;}
+#yyCalendarMainGrid .yy-calendar-today{background:#F1F1F1;}
+.yy-calendar-cover-container{position:absolute;left:0;top:0;width:0;height:0;}
+.yy-calendar-cover-container .yy-calendar-cover{font-size:0;line-height:0;position:absolute;background:#bcd3fc;opacity:.5;filter:alpha(opacity=50);}
+
+.yy-floatbox{background:#fff;border:1px solid #ccc;box-shadow:0 2px 4px rgba(0,0,0,.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,.2);position:absolute;top:0;visibility:hidden;}
+.yy-floatbox.has-bottom-prong {margin-bottom: 9px;}
+.yy-floatbox-main{}
+.yy-floatbox-close{cursor:pointer;position:absolute;right:16px;top:16px;width:14px;height:13px;}
+.yy-floatbox-top-arrow,.yy-floatbox-bottom-arrow{width:20px;height:12px;position:absolute;left:45%;}
+.yy-floatbox-top-arrow{background:url(../images/rili_arrow_up.png) no-repeat;top:-12px;}
+.yy-floatbox-bottom-arrow{background:url(../images/rili_arrow_down.png) no-repeat;bottom:-12px;}
+
+.yy-floatbox-content .rcChuangjian{margin:5px 0;}
+
+/*日历颜色值（左右三角，背景色，文字颜色）*/
+.st-ad-ml{position:absolute;top:0px;left:-8px;width:8px; height:18px;}
+.st-ad-mr{position:absolute;top:0px;right:-8px; width:8px; height:18px;}
+/*蓝色-颜色1*/
+.colorBg01{ background:#bcd3fc;}
+.colorBg01 .st-ad-ml {background-position:0 -1971px;}
+.colorBg01 .st-ad-mr {background-position:-8px -1971px;}
+.colorBg01Font{ color:#0177b4;}
+/*黄色-颜色2*/
+.colorBg02{ background:#fbe693;}
+.colorBg02 .st-ad-ml {background-position:0 -1997px;}
+.colorBg02 .st-ad-mr {background-position:-8px -1997px;}
+.colorBg02Font{ color:#e27d2b;}
+/*绿色-颜色3*/
+.colorBg03{ background:#bdecfb;}
+.colorBg03 .st-ad-ml {background-position:0 -2023px;}
+.colorBg03 .st-ad-mr {background-position:-8px -2023px;}
+.colorBg03Font{ color:#38aed4;}
+/*土黄色-颜色4*/
+.colorBg04{ background:#f0e692;}
+.colorBg04 .st-ad-ml {background-position:0 -2049px;}
+.colorBg04 .st-ad-mr {background-position:-8px -2049px;}
+.colorBg04Font{ color:#b09d01;}
+/*红色-颜色5*/
+.colorBg05{ background:#ff9177;}
+.colorBg05 .st-ad-ml {background-position:0 -2075px;}
+.colorBg05 .st-ad-mr {background-position:-8px -2075px;}
+.colorBg05Font{ color:#ff9177;}
+
+/**����**********/
+.yy-calendar-main{overflow-x:hidden;overflow-y:scroll;border:1px solid #D6D6D6;border-right:none;}
+.yy-calendar-day-table{width:100%;position:relative;}
+.yy-calendar-day-times, .yy-calendar-day-block, .yy-calendar-today-block{border-left:1px solid #D6D6D6;border-right:1px solid #D6D6D6;}
+.yy-calendar-day-block, .yy-calendar-today-block{vertical-align: top;}
+.yy-calendar-day-times{border-left:none;width:42px; *width:3px;}
+.yy-calendar-day-time{border-top:1px solid #D6D6D6;padding-right:2px;text-align:center;}
+.yy-calendar-today{background-color: #F1F1F1;}
+
+.yy-spanningwrapper{margin:1px 0 0 1px;position:relative;}
+.yy-hourmarkers{position:absolute;width:100%; left:0; top:0;}
+.yy-hourmarker{}
+.yy-nowmarker{}
+.yy-markercell{height:42px;}
+.yy-dualmarker{height:20px;margin-bottom:20px;border-bottom:1px dotted #D6D6D6;border-top:1px solid #D6D6D6;font-size:1px;}
+
+.yy-col-taskwrapper{cursor:default;position:relative;}
+.yy-col-overlaywrapper{height:0;position:relative;}
+.yy-gutter{height:0;margin-right:6px;position:relative;}
+.yy-nowmarker{border-top:2px solid #FF7F6E;height:0;left:0;overflow:hidden;position:absolute;top:0;width:100%;}
+.yy-nowptr{height:0;left:0;overflow:hidden;position:absolute; border:5px solid #767676;border-color: #f9f9f9 #f9f9f9 #f9f9f9 #FF7F6E;}
+
+/************************/
+.yy-user-item.actived{background:#E6E6E6;}
+
+/*日历-小日历*/
+.riliSmall2 .today p{ height:22px; background-color:#cccccc; line-height:22px;}
+.riliSmall2 .today .year{ width:88px;}
+.riliSmall2 .today .year span{ width:60px; display:inline-block;}
+.riliSmall2 .today .day{ width:81px; margin-left:1px; display:inline;}
+.riliSmall2 .today .day span{ width:41px; display:inline-block;}
+.riliSmall2 .icoLeft{border:4px solid #27C4D7;width:0;height:0;border-color: #ccc #878787 #ccc #ccc ;display:inline-block; vertical-align:middle;}
+.riliSmall2 .icoRt{border:4px solid #27C4D7;width:0;height:0;border-color:#ccc #ccc #ccc #878787;display:inline-block; vertical-align:middle;}
+.riliSmall2 table thead tr td{ font-size:10px; color:#a4a4a4; line-height:16px; text-align:center;}
+.riliSmall2 table tbody tr td{ width:17px; height:20px; border:1px solid #cfcfcf; text-align:right; vertical-align:middle; padding-right:3px;}
+.riliSmall2 table tbody tr .blueBg{ background-color:#84bbd9; color:#fff;}
+.riliSmall2 table tbody tr .blueBor{ border:1px solid #1786bd;}
+.riliSmall2 table tbody tr .blueBor-bottom{border-bottom:1px solid #1786bd;}
+.riliSmall2 table tbody tr .blueBor-right{border-right:1px solid #1786bd;}
+
+
+/*新版全周日历样式 by chenpp*/
+.riliDiv .cyTitle li{ padding:0 18px;}
+.new_rili_sel{ margin:3px 4px 0 0; width:130px;}
+.rili_all{ font-size:12px; float:left; line-height:30px; height:30px; margin-right:20px;}
+.rili_all input{ vertical-align:middle; margin-right:2px;}
+.rili_cont{ padding:5px 10px; overflow:hidden; height:auto;}
+.rili_contL{ width:184px; height:750px; display:inline-block; float:left; padding:5px 10px; background:#eff0f2;}
+.rili_contL .riliSmall2 .today .year{ width:105px;}
+.rili_contL .riliSmall2 .today .day{ width:75px;}
+.rili_contL .riliSmall2 table tbody tr td{ width:22px; height:25px;}
+.rili_tab_r{ width:auto;}
+.rili_contL .riliSmall2 table tbody tr .blueBg{ background:#84bcd7;}
+.rili_contL .riliSmall2 table tbody tr .blueBor{ background:#1885bd; border:none;}
+.rili_contL .herRiliHead{ border-bottom:1px solid #ddd; padding-bottom:5px;}
+
+.rili_contL .rili_user{ border-top:1px solid #fff; height:250px;}
+
+.calendar .main .left .yy-user-item{height:30px; line-height:30px; padding:5px; width:158px; border-bottom:1px solid #e6e6e6; float:left; cursor:pointer;}
+.calendar .main .left .yy-user-item.cur,
+.calendar .main .left .yy-user-item:hover{ background:#e6e6e6;}
+.calendar .main .left .yy-user-item .user_pic{ width:30px; height:30px; margin-right:5px;}
+.calendar .main .left .yy-user-item .user_pic  img{ width:30px; height:30px;}
+.calendar .main .left .yy-user-item a{ text-decoration:none;}
+.calendar .main .left .yy-user-item a.user_Del{color:#666; font-size:16px;font-size: 10px; font-family:Arial, Helvetica, sans-serif;font-weight: bold;}
+
+
+.rili_contR{ width:712px; height:750px; display:inline-block; float:right; background:#fafbfd; padding:5px 10px 15px;}
+.rili_Rdata{ height:30px; width:720px; line-height:30px;}
+.week_num{ width:500px; text-align:left; color:#757678; font-family:"\5fae\8f6f\96c5\9ed1"; font-size:16px;}
+.week_num span{ font-size:12px; font-family:sans-serif; color:#b5b5b5;}
+.rili_contR .rili_Rdata .w25 {display: inline-block;height: 25px;padding: 0 10px 0 0;width: 20px;}
+.rili_contR .rili_Rdata .w30 {border-left: 1px solid #CFCFCF;display: inline-block;height: 25px; padding: 0 0 0 10px;width: 20px;}
+.rili_contR .rili_Rdata .sj {margin: 8px 0 0;}
+.rili_contR .riliRight{ margin:0;}
+.rili_contR .riliTable{ float:left;}
+.rili_contR .new_rili_week td{ text-align:center; color:#b6b6b6;}
+.rili_contR .yy-calendar-day-time{ text-align:center;}
+.rili_contR .new_rili_week .rili_jieqi{ color:#767676; font-size:12px; display:inline-block;}
+.rili_contR .yue_rili_title th{ text-align:center;}
+
+/* 设置日历内美化滚动条的样式 */
+.yy-calendar-left .scroll-shower{position:absolute; top:0;}
+.yy-calendar-left .scroll-container{width:168px; height:205px;overflow:hidden;position:absolute;left:0;top:20px;margin-top:40px;word-wrap:break-word;}
+
+.yy-calendar-left .scroller{position:absolute;left:168px;top:20px;margin-top:40px;width:20px;height:205px;-moz-user-focus:ignore;-moz-user-input:disabled;-moz-user-select:none;}
+.yy-calendar-left .scroller .scroller-bar-wrap{width:4px;top:0; height:205px; background:#dad6d7; margin-right:4px; border-radius:5px;}
+.yy-calendar-left .scroller .scroller-bar{position:absolute;width:14px;height:23px;position:absolute;left:-4px;background:url(../images/new_qz/rili_gd_pic.gif) no-repeat;display:inline-block;cursor:pointer;}
+.yy-calendar-left .scroller .scroller-up{position:absolute;width:20px; height:0px; left:0; top:0;}
+.yy-calendar-left .scroller .scroller-down{position:absolute; width:20px; height:0px; left:0; bottom:0;}
+
+.yy-calendar-left .shared-block .scroll-container{margin-top:0;}
+.yy-calendar-left .shared-block .scroller{margin-top:0;}
+
+/** 日程编辑框样式 ***/
+.schedule-edit-form{}
+.schedule-edit-form .controls{
+    padding: 8px 0 8px 10px;
+}
+.schedule-edit-form label{height: 28px;line-height: 28px;}
+.schedule-edit-form label [type="checkbox"]{margin-top:7px;margin-right:10px;}
+.schedule-edit-form .controls.button-line input{
+    float: right;margin-right: 40px;
+}
+.schedule-edit-form .schedule-partner-block,
+.schedule-edit-form .schedule-notifier-block{
+    width: 694px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-shadow: 0 1px 0 #F8F8F8 inset;
+    color: #666666;
+    padding: 0;
+}
+.schedule-edit-form .schedule-partner-block input,
+.schedule-edit-form .schedule-notifier-block input{border: none;}
+.schedule-edit-form .schedule-noticetype,
+.schedule-edit-form .schedule-leadtime{float: left; height: 28px; line-height: 28px;margin-right: 10px;}
+.schedule-edit-form [name="leadtime"]{height: 16px;line-height: 16px;}
+
+.schedule-edit-form .edit-detail{float: left;}
+.add-member-table{width: 100%;table-layout: fixed;}
+.add-member-table .add-button{width: 30px;background: #E9E9E9;}
+.add-member-table .add-button a{display: block;width: 30px;height: 26px;background-position: -5px -1070px;}

@@ -1,0 +1,215 @@
+body {
+	font: 100% Verdana, Tahoma, Arial;
+	font-size:12px;
+	color: #444;
+	margin: 0px;
+	padding:0px;
+}
+
+form {
+	padding: 0px;
+	margin: 0px;
+}
+
+img {
+	border: 0px;
+}
+
+
+
+div.title{
+	width:100%;
+	font-size: 100%;
+	font-weight:bold;
+	background: #F5F5F5 url(../images/title_bar.gif);
+	height: 32px;
+	line-height:32px;
+	padding:5px;
+	border:1px solid #BBB;
+}
+
+table.list {
+	font-size: 100%;
+	text-decoration: none;
+	border: 1px solid #BBB;
+}
+
+table.list td{
+	padding:5px;
+}
+
+table.list tr.odd {
+	background: #E8F2FE;
+}
+
+table.list tr.header {
+	color: #FFF;
+	font-weight:bold;
+	background: #BBB url(../images/list_header.gif);
+}
+
+table.list tr.header td{
+	height: 27px;
+	vertical-align:baseline;
+}
+
+table.list tr.item1  
+{
+	background-color: #F5F5F5;
+}
+
+
+a {
+	color: #997300;
+	padding: 1px;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #C19100;
+	background: #FFF6D9;
+}
+
+input,select {
+	font: 100% Tahoma, Verdana, Arial;
+	border: 1px solid #939BA2;
+	height: 20px;
+}
+
+textarea {
+	font: 100% Courier New, Courier, Verdana;
+	border: 1px solid #939BA2;
+}
+
+.link {
+	color: #3366CC;
+	text-decoration: underline;
+	cursor: hand;
+}
+
+/* 导航菜单 START */
+/* 菜单项 */
+ul.mainmenu{
+	margin-top:0;
+	margin-left:0;
+	padding:0;
+}
+ul.mainmenu li {
+	float:left; /* 靠左浮动 */
+	list-style:none; /* 清空列表风格 */
+	margin-right:1px; /* 右侧的间隔 */
+}
+/* 菜单项链接 */
+ul.mainmenu li a {
+	padding: 10px; /* 内边距 */
+	display:block; /* 显示为块 */
+	color:#FFF; /* 文字颜色 */
+	background:#67ACE5; /* 背景颜色 */
+	text-decoration:none; /* 没有下横线 */
+}
+/* 当前菜单位置 */
+ul.mainmenu ul {
+	position:absolute;
+}
+/* 当前菜单项链接 */
+ul.mainmenu li.selected a {
+	background:#5495CD; /* 背景颜色 */
+}
+/* 选中菜单项链接 */
+ul.mainmenu li a:hover {
+	background:#4281B7; /* 背景颜色 */
+}
+/* 单列二级菜单 */
+ul.submenu {
+	display:none; /* 初始化页面时不显示出来 */
+	padding:0;
+	margin:0;
+	z-index:999;
+}
+/* 单列二级菜单的菜单项 */
+ul.submenu li {
+	float:none; /* 垂直排列 */
+	margin:0;
+	padding:0;
+}
+/* 单列二级菜单的当前菜单项链接 */
+ul.submenu li a {
+	width:100px; /* 对 IE6 来说十分很重要 */
+}
+/* 选中菜单项链接 */
+ul.submenu li a:hover {
+	background:#4281B7; /* 背景颜色 */
+}
+
+/* 多列二级菜单 */
+table.submenu{
+	position:absolute;	
+	background-color:#67ACE5;
+	-moz-border-radius: 0 0px 5px 5px;
+    -webkit-border-radius: 0 0px 5px 5px;
+    border-radius: 0 0px 5px 5px;
+    padding: 10px;
+	display:none;
+}
+
+table.submenu td{
+	vertical-align:top;
+}
+
+/* 多列二级菜单的菜单项 */
+table.submenu td a{
+	padding:10px;
+	display:block;
+	color:#FFF;
+	background-color:#67ACE5;
+	text-decoration:none; 
+}
+
+table.submenu td a:hover{
+	background-color:#4281B7; 
+}
+/* 导航菜单 END */
+
+
+/*
+.button {
+	padding: 5px 5px 5px 5px;
+	font-size: 100%;
+	font-weight:bold;
+	color: #82700F;
+	background: #FEF7CF;
+	border: 1px solid #E8CA23;
+	cursor:hand;
+	height: 25px;
+	line-height: 12px;
+}
+*/
+
+.tip {
+	font: 10px Verdana, Arial, Tahoma;
+	text-align: center;
+	background: #EEE url(../images/tip.gif);
+	height: 22px;
+	width: 28px;
+	line-height: 20px;
+}
+
+/*分页样式 START*/
+div.nav_page{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	clear: both;
+}
+div.nav_page a{
+	border: 1px solid #aaa;
+	color: #333;
+	padding: 3px 8px;
+	line-height: 20px;
+}
+div.nav_page a:hover, div.nav_page a.selected{
+	color: #fff;
+	background: #6b3;
+	border: 1px solid #390;
+}
+/*分页样式 END*/

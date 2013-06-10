@@ -1,0 +1,318 @@
+.hidden{
+    display: none;
+}
+div.employee_header{
+    margin-top: 25px;
+    background: #e5e5e5;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#e5e5e5));
+    background: -webkit-linear-gradient(top,#ffffff,#e5e5e5);
+    background: -o-linear-gradient(top,#ffffff, #e5e5e5);
+    background: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+    background: -ms-linear-gradient(top , #ffffff, #e5e5e5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#e5e5e5');
+    border: solid 1px #e3e3e3;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+div.employee_header ul.tab li{
+    float: left;
+    list-style: none;
+}
+div.employee_header ul.tab a{
+    display: block;
+    font-weight: bold;
+    padding: 10px 20px;
+    color:#767676;
+    font-size: 14px;
+}
+div.employee_header ul.tab a:hover,a.selected{
+    border: 1px solid #ececec;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fafafa),to(#ffffff));
+    background: -webkit-linear-gradient(top,#fafafa,#ffffff);
+    background: -o-linear-gradient(top,#fafafa, #ffffff);
+    background: -moz-linear-gradient(top, #fafafa, #ffffff);
+    background: -ms-linear-gradient(top , #fafafa, #ffffff);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fafafa', endColorstr='#ffffff');
+}
+div.employee_content{
+    background: white;
+    border:1px solid #e3e3e3;
+    border-top:none;
+}
+div.employee_content div.relationintroduce{
+    margin: 0px auto;
+    width: 800px;
+}
+div.employee_content div.relationintroduce h2{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+div.employee_content div.relationintroduce p{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+div.employee_content div.category{
+    border: 1px solid #d7dae1;
+    border-left: none;
+    border-right: none;
+    height: 55px;
+    line-height: 55px;
+    background: #eef0f5;
+}
+div.employee_content div.category a{
+    margin:0 10px;
+    background: transparent;
+    border: 0;
+    color:#687289;
+}
+div.employee_content div.category a:hover{
+    text-decoration: underline;
+}
+div.employee_content div.category a.selected{
+    text-decoration: underline;
+    font-weight:bold;
+}
+div.employee_content div.firstletter{
+    border: 1px solid #d7dae1;
+    border-left: none;
+    border-right: none;
+    height: 55px;
+    line-height: 55px;
+    background: #fafbfc;
+}
+div.employee_content div.firstletter a{
+    margin:0 10px;
+    background: transparent;
+    border: 0;
+    color:#687289;
+    font-weight: bold;
+    font-size: 14px;
+}
+div.employee_content div.firstletter a:hover{
+    text-decoration: underline;
+}
+div.employee_content div.firstletter a.selected{
+    text-decoration: underline;
+    font-weight:bold;
+}
+.employeeSearchContainer{
+    margin:18px 12px 0 0;
+    text-align:right;
+}
+a.button {
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+}
+a.cancelFollowButton{
+    background: #F1EEEE;
+    box-shadow: 1px 1px 1px #DEDEDE;
+    background: -moz-linear-gradient(top , #F1EEEE, #D4D4D4);
+    background: -webkit-linear-gradient(top, #F1EEEE, #D4D4D4);
+    background: -o-linear-gradient(top, #F1EEEE, #D4D4D4);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F1EEEE', endColorstr='#D4D4D4');
+}
+a.addFollowButton{
+    background: #EE6D12;
+    box-shadow: 1px 1px 1px #C5C5A4;
+    background: -moz-linear-gradient(top , #FB9717, #EE6D12);
+    background: -webkit-linear-gradient(top, #FB9717, #EE6D12);
+    background: -o-linear-gradient(top, #FB9717, #EE6D12);
+    color: #FFFFFF;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FB9717', endColorstr='#EE6D12');
+}
+table.employeeTab tbody tr:hover, table.addressbookTab tbody tr:hover{
+    background: #FFFFD4;
+}
+/**全体成员首页**/
+table.employeeTab th,table.employeeTab td{
+    padding: 5px;
+    width: 160px;
+    text-align: left;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+table.employeeTab th{
+    border:1px solid #bfcfda;
+    text-align: center;
+}
+table.employeeTab td{
+    border-bottom: 1px solid #bfcfda;
+}
+table.employeeTab input, table.employeeTab img{
+    vertical-align: middle;
+}
+table.employeeTab img{
+    padding: 0 4px;
+    height:25px;
+    width:25px;
+}
+a.attentionselected{
+    background: #2C8DAE;
+    background: -webkit-gradient(linear,left top,left bottom,from(#32A8E6),to(#2C8DAE));
+    background: -webkit-linear-gradient(top,#32A8E6,#2C8DAE);
+    background: -o-linear-gradient(top,#32A8E6, #2C8DAE);
+    background: -moz-linear-gradient(top, #32A8E6, #2C8DAE);
+    background: -ms-linear-gradient(top , #32A8E6, #2C8DAE);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#32A8E6', endColorstr='#2C8DAE');
+    box-shadow: 1px 1px 0px #C5C5C5;
+    border-radius:5px;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    text-align:center;
+    width:60px;
+}
+div.client,div.group{
+    background: #E3EAF0;
+    width: 980px;
+    height: 38px;
+    line-height: 38px;
+    margin-top:1px;
+}
+div.employee_content ul.catagoryUl{
+    float: left;
+    list-style: none;
+}
+div.employee_content ul.catagoryUl li{
+    float: left;
+}
+div.employee_content ul.catagoryUl li a{
+    color:#0178B3;
+    padding: 4px 12px;
+    border-right: 1px solid #D4D8DF;
+}
+div.employee_content ul.catagoryUl li a:hover{
+    text-decoration: underline;
+}
+div.employee_content a.createEmployeeGroup{
+    color: #fff;
+    float:right;
+    display: inline-block;
+    line-height: 20px;
+    padding: 3px 10px;
+    background: #32A8E6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#32A8E6), to(#2C8DAE));
+    background: -moz-linear-gradient(top,  #32A8E6,  #2C8DAE);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px 0 #C5C5C5;
+    position: relative;
+    top: 6px;
+    right:10px;
+    text-decoration: none;
+}
+.employeeSearchContainer{
+    margin:18px 12px 0 0;
+    text-align:right;
+}
+.avatar{
+    height:25px;
+    width:25px;
+    vertical-align: middle;
+}
+#moreGroupContainer{
+    background: #FFFFFF;
+    border: 1px solid #B6B6B6;
+    position: absolute;
+    left: -14px;
+    top: 34px;
+}
+#moreGroupContainer a{
+    border: none;
+    display: block;
+    margin:0;
+    padding: 0;
+    height: 24px;
+    line-height: 24px;
+    width: 77px;
+    text-align: center;
+}
+
+/**通讯录视图**/
+.addressbookContainer{
+    background:#fff;
+    padding:10px 0 30px 0;
+}
+div.deptTreeContainer{
+    padding: 0 0 0 3px;
+}
+div.employeeContainer{
+    padding:8px 0 0 10px;
+    background:#f9f9f9;
+}
+h2.cylTit{
+    background: #526288;
+    border:1px solid #303748;
+    border-radius:8px 8px 0 0;
+    box-shadow:-1px 0 1px #717273;
+    color:#D4D7DD;
+    height:39px;
+    line-height:39px;
+    font-size:14px;
+    padding-left:10px;
+}
+input.searchDeptName{
+    border:1px solid #dbdbdb;
+    border-radius:5px;
+    height:24px;
+    line-height:24px;
+    width:190px;
+    margin:10px 4px 10px 5px;
+}
+h3.deptTreeTitle{
+    padding:0 0 0 10px;;
+}
+ul.deptTreeUl{
+    padding:0 0 0 10px;
+}
+.employeeContainer div.firstletter{
+    height: 39px;
+}
+.employeeContainer div.firstletter a{
+    padding:10px 5px;
+    font-size:14px;
+    font-weight:bold;
+}
+table.addressbookTab{
+    border:solid #b7b7b7;
+    border-width:1px 1px 0 1px;
+}
+table.addressbookTab th{
+    height:36px;
+    line-height:36px;
+    background:#dbdbdb;
+    border:solid #b7b7b7;
+    border-width:0 1px 1px 0;
+}
+table.addressbookTab td{
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    border-bottom:1px solid #b7b7b7;
+}
+table.addressbookTab td img{
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+}
+table.addressbookTab input.employeeId{
+    margin-left:2px;
+}
+tr:nth-child(even){
+    background: #EEF0F5;
+}
+.qitaterPage{
+    text-align:center;
+    padding:15px 0;
+}

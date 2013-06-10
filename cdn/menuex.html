@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery/jquery-1.5.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/grid/960_12_70_10.css" />
+<style>
+/* 导航菜单 START*/
+ul.mainmenu li {
+	float:left; 
+	list-style:none; 	
+}
+
+ul.mainmenu li a {
+	padding:10px 10px 10px 10px; 
+	display:block; 
+	color:#FFF; 
+	font-size:12px;
+	text-decoration:none; 
+}
+
+ul.mainmenu li.selected {
+	background:#5495CD; 
+}
+
+ul.submenu{
+	display:none; 
+	position:absolute;
+	margin:0;
+	padding:0;
+}
+
+ul.submenu li{
+	float:none;
+	list-style:none; 
+}
+
+ul.submenu li a{
+	padding:10px 10px 10px 10px; 
+	display:block; 
+	color:#FFF; 
+	font-size:12px;
+	text-decoration:none; 
+}
+
+table.submenu {
+	display:none; 
+	position:absolute;
+	margin:0;
+	padding:0;
+}
+
+table.submenu td{
+	background:#67ACE5; 
+}
+
+table.submenu td a {
+	padding:10px 10px 10px 10px; 
+	display:block; 
+	color:#FFF; 
+	background:#67ACE5; 
+	font-size:12px;
+	text-decoration:none; 
+}
+/* 导航菜单 END*/
+</style>
+<script type="text/javascript">
+	function initmenu(submenusize,bgcolor,hoverbgcolor){				
+		$("ul.submenu li a").each(function(index, element) {						
+			var str=$(this).text();
+			var len = str.length;
+			var width = len;
+			for(var i=0; i < len; i++) {
+				if(str.charCodeAt(i) >= 255) {
+					width++;
+				}
+			}
+			$(this).css("width",width*submenusize/2+"px");
+		});
+		
+		$("table.submenu td a").each(function(index, element) {						
+			var str=$(this).text();
+			var len = str.length;
+			var width = len;
+			for(var i=0; i < len; i++) {
+				if(str.charCodeAt(i) >= 255) {
+					width++;
+				}
+			}
+			$(this).css("width",width*submenusize/2+"px");
+		});			
+						
+		$("ul.mainmenu").children("li").each(function(index, element) {	
+			$(this).css("background-color",bgcolor);
+			$(this).hover(function(){				
+				$(this).css("background-color",hoverbgcolor);
+				$(this).find('ul:eq(0)').css("margin-top",0).css("margin-left",0).fadeIn();				
+				$(this).find('table:eq(0)').css("margin-top",0).css("margin-left",0).fadeIn();				
+			},function(){
+				$(this).css("background-color",bgcolor);
+				$(this).find('ul:eq(0)').fadeOut();
+				$(this).find('table:eq(0)').fadeOut();
+			});						            
+        });
+		
+		$("ul.submenu li").each(function(index, element) {
+			$(this).css("background-color",bgcolor);
+			$(this).hover(function(){				
+				$(this).css("background-color",hoverbgcolor);
+				$(this).find('ul:eq(0)').css("margin-top",0-$(this).height()).css("margin-left",$(this).width()).fadeIn();				
+			},function(){				
+				$(this).css("background-color",bgcolor);
+				$(this).find('ul:eq(0)').fadeOut();
+				
+			});					
+        });
+		
+		$("table.submenu td").each(function(index, element) {
+			$(this).hover(function(){				
+				$(this).css("background-color","#4281B7");
+				$(this).find('a:eq(0)').css("background-color","#4281B7");
+				$(this).find('table:eq(0)').css("margin-top",0-$(this).height()).css("margin-left",$(this).width()).fadeIn();				
+			},function(){				
+				$(this).css("background-color","#67ACE5");
+				$(this).find('a:eq(0)').css("background-color","#67ACE5");
+				$(this).find('table:eq(0)').fadeOut();
+				
+			});					
+        });				
+	}
+	$(document).ready(function(e) {		
+		initmenu(12,"#67ACE5","#4281B7");		
+    });
+</script>
+</head>
+
+<body>
+<div class="container_12 clearfix">
+	<div class="grid_12">
+    <ul id="menu" class="mainmenu">
+    <li><a href="#">菜单一</a>
+       <ul class="submenu">
+       <li><a href="#">菜单一_1</a></li>
+       <li><a href="#">菜单一_2</a></li>
+       <li><a href="#">菜单一_3</a>
+       		<ul class="submenu">		
+            	<li><a href="#">菜单一_1_1</a></li>
+		       <li><a href="#">菜单一_2_1sdfsdfsdsddsf</a>
+               		<ul class="submenu">
+                    	<li><a href="#">菜单一_2_1sdfsdfsdsddsf</a></li>
+                        <li><a href="#">菜单一_2_1sdfsdf</a></li>
+                    </ul>
+               </li>
+            </ul>
+       </li>
+       </ul>
+    </li>
+    <li><a href="#">菜单二</a></li>
+    <li><a href="#">菜单三</a></li>
+    </ul>
+    </div>
+</div>    
+</body>
+</html>

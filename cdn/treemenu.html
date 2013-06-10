@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="js/jquery/ztree/jquery.ztree.all-3.4.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/jquery/ztree/zTreeStyle-3.4.css" />
+<link rel="stylesheet" type="text/css" href="css/grid/960_12_70_10.css" />
+<style>
+body{
+	margin:0px;
+	padding:0px;
+}
+
+table.mainmenu{
+	margin:0px;
+	padding:0px;
+}
+
+table.mainmenu tr{
+	background-color:#67ACE5;
+}
+
+table.mainmenu td{	
+	font-size:12px;
+}
+
+table.mainmenu td a.mainmenu{
+	padding:10px 10px 10px 10px; 
+	display:block;
+	color:#FFF; 
+	font-size:12px;
+	text-decoration:none; 
+}
+
+table.mainmenu td a.selected {
+	background:#5495CD; 
+}
+
+
+
+ul.ztree {margin-top: 10px;border: 1px solid #617775;background: #f0f6e4;width:220px;height:360px;overflow-y:scroll;overflow-x:auto;position:absolute;margin:0px;display:none;}
+
+ul.ztree li a:hover{
+	background-color:red;
+}
+
+div.zTreeDemoBackground {width:250px;height:362px;text-align:left;}
+</style>
+<script type="text/javascript">
+	function initmenu(submenusize,bgcolor,hoverbgcolor){									
+		$("table.mainmenu tr td").each(function(index, element) {	
+			$(this).hover(function(){				
+				$(this).css("background-color",hoverbgcolor);		
+				$(this).find("ul:eq(0)").css("top",$(this).position().top+$(this).height()).css("left",$(this).position().left).fadeIn();							
+			},function(){
+				$(this).css("background-color",bgcolor);
+				$(this).find("ul:eq(0)").fadeOut();
+			});						            
+        });
+	
+	}
+	var setting = {
+			view: {
+				showIcon: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes1 =[
+			{ id:1, pId:0, name:"父节点1 - 展开", open:true},
+			{ id:11, pId:1, name:"父节点11 - 折叠"},
+			{ id:111, pId:11, name:"叶子节点111"},
+			{ id:112, pId:11, name:"叶子节点112"},
+			{ id:113, pId:11, name:"叶子节点113"},
+			{ id:114, pId:11, name:"叶子节点114"},
+			{ id:12, pId:1, name:"父节点12 - 折叠"},
+			{ id:121, pId:12, name:"叶子节点121"},
+			{ id:122, pId:12, name:"叶子节点122"},
+			{ id:123, pId:12, name:"叶子节点123"},
+			{ id:124, pId:12, name:"叶子节点124"},
+			{ id:13, pId:1, name:"父节点13 - 没有子节点"},			
+		];
+		
+		var zNodes2=[
+			{ id:2, pId:0, name:"父节点2 - 折叠"},
+			{ id:21, pId:2, name:"父节点21 - 展开", open:true},
+			{ id:211, pId:21, name:"叶子节点211"},
+			{ id:212, pId:21, name:"叶子节点212"},
+			{ id:213, pId:21, name:"叶子节点213"},
+			{ id:214, pId:21, name:"叶子节点214"},
+			{ id:22, pId:2, name:"父节点22 - 折叠"},
+			{ id:221, pId:22, name:"叶子节点221"},
+			{ id:222, pId:22, name:"叶子节点222"},
+			{ id:223, pId:22, name:"叶子节点223"},
+			{ id:224, pId:22, name:"叶子节点224"},
+			{ id:23, pId:2, name:"父节点23 - 折叠"},
+			{ id:231, pId:23, name:"叶子节点231"},
+			{ id:232, pId:23, name:"叶子节点232"},
+			{ id:233, pId:23, name:"叶子节点233"},
+			{ id:234, pId:23, name:"叶子节点234"},
+		]
+	$(document).ready(function(e) {
+        $.fn.zTree.init($("#ztree1"),setting,zNodes1);
+		$.fn.zTree.init($("#ztree2"),setting,zNodes2);
+		initmenu(12,"#67ACE5","#4281B7");		
+    });
+</script>
+</head>
+
+<body>
+
+<div class="container_12 clearfix">
+	<div class="grid_12">
+    <table class="mainmenu" cellpadding="0" cellspacing="0">
+    <tr>
+	<td><a href="#" class="mainmenu">菜单一</a>
+    	<ul class="ztree" id="ztree1">
+</ul>
+    </td>
+    <td><a href="#" class="mainmenu">菜单二</a>
+    	<ul class="ztree" id="ztree2">
+</ul>
+    </td>
+    <td><a href="#" class="mainmenu">菜单三</a></td>
+    </tr>
+    </table>
+    <!--
+    <ul id="menu" class="mainmenu">
+	<li class="mainmenu" treeId="1"><a href="#">菜单一</a>
+    	<ul class="ztree">
+</ul>
+    </li>
+    <li class="mainmenu" treeId="2"><a href="#">菜单二</a></li>
+    <li class="mainmenu" treeId="3"><a href="#">菜单三</a></li>
+    </ul>
+    -->
+    </div>
+</div>    
+
+<!--<div class="zTreeDemoBackground">-->
+
+<!--</div>-->
+</body>
+</html>

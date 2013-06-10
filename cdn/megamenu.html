@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body,ul,ol,li,a{padding:0;margin:0;color:#606060;line-height:1.5em;font-family:Helvetica,Tahoma,Verdana,Lucida Grande,Arial,宋体,Arial Unicode,sans-serief}
+body{font-size:12px;}
+
+ul{list-style-position:outside;list-style-type:none;}
+a{color:#606060;text-decoration:none;}
+.categorySelect {border:#666 1px solid;padding: 0 26px 0 26px;float:left;overflow:hidden;cursor:pointer;white-space:nowrap;position:absolute;top:100px;left:20px;text-overflow:ellipsis;max-width: 500px;line-height:20px;background:#ddd;zoom:1;}
+.categorySelect .selectArrow {display:block;right:3px;background:url(http://www.obyfashion.me/Styles/Images/select_arrow.gif) no-repeat 4px 6px;width:14px;position:absolute;top:1px;height:14px;}
+.categorySelect .selectText {display:block;color:#333;}
+.categorySelect A {display:block;background:#43393a;width:9px;height:9px;}
+.tree {z-index:99;left:36p0px;position:absolute;top:119px;}
+.tree li A {border-right: #666 1px solid; padding-right: 12px; border-top: #666 1px solid; display: none; padding-left: 12px; padding-bottom: 0px; width: 94px; color: #aaa; line-height: 29px; padding-top: 0px; background-color: #3f3f3f}
+.tree A.hasChild {background-position: 105px center; background-image: url(http://www.obyfashion.me/Styles/Images/treeRightArrow.gif); background-repeat: no-repeat}
+.tree A.current {color: #fff; background-color: #191919}
+.tree A:hover {color: #fff; background-color: #191919}
+.tree ul {left: 119px;position:absolute;}
+.tree ul.rootUl {LEFT: 0px}
+.tree ul.rootUl li{zoom:1;width:119px;float:left;position:relative;}
+</style>
+<script type="text/javascript" src="js/jquery/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery/megamenu/vertical.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        new Tree("categoryTree");
+    });
+</script>
+</head>
+
+<body>
+<div class=categorySelect id=categorySelect><span class=selectText id=selectText>选择分类</span><span class=selectArrow></span></div>
+<div class=tree id=categoryTree>
+	<ul class=rootUl>
+  		<li>
+  	  		<A class=hasChild href="#" alias="clothing">服饰</A> 
+			<ul class="">
+                <li>
+                    <A class=hasChild href="#" alias="denim">牛仔裤</A> 
+                    <ul class="">
+                      <li><A class="" href="#" alias="bootcut">靴裤款</A></li>
+                      <li><A class="" href="#" alias="classic">经典款</A></li>
+                      <li><A class="" href="#" alias="cropped">九分裤</A></li>
+                      <li><A class="" href="#" alias="flare">大喇叭</A></li>
+                      <li><A class="" href="#" alias="relaxed">宽松</A></li>
+                      <li><A class="" href="#" alias="skinny">紧身</A></li>
+                      <li><A class="" href="#" alias="straight">直筒</A></li>
+                      <li><A class="" href="#" alias="shorts">短裤</A></li>
+                      <li><A class="" href="#" alias="bell-shape">小喇叭</A></li>
+                      <li><A class="" href="#" alias="wide-leg">阔腿</A></li>
+                    </ul>
+                </li>
+                <li>
+                    <A class=hasChild href="#" alias="dresses">连衣裙</A>
+                    <ul class="">
+                      <li><A class="" href="#" alias="long-sleeve">长袖</A></li>
+                      <li><A class="" href="#" alias="short-sleeve">短袖</A></li>
+                      <li><A class="" href="#" alias="sleeveless">无袖</A></li>
+                      <li><A class="" href="#" alias="slip">吊带</A></li>
+                      <li><A class="" href="#" alias="strapless">抹胸裙</A></li>
+                    </ul>
+                </li>
+                <li>
+                    <A class=hasChild href="#" alias="intimates">内衣</A> 
+                    <ul class="">
+                      <li><A class="" href="#" alias="bras">胸衣</A></li>
+                      <li><A class="" href="#" alias="camisoles">背心</A></li>
+                      <li><A class="" href="#" alias="chemises">衬裙</A></li>
+                      <li><A class="" href="#" alias="gowns">睡袍</A></li>
+                      <li><A class="" href="#" alias="pajamas">睡衣</A></li>
+                      <li><A class="" href="#" alias="panties">内裤</A></li>
+                      <li><A class="" href="#" alias="robes">浴袍</A></li>
+                      <li><A class="" href="#" alias="socks">袜子</A></li>
+                      <li><A class="" href="#" alias="shapewear">塑形内衣</A></li>
+                      <li><A class="" href="#" alias="slippers">拖鞋</A></li>
+                    </ul>
+                </li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

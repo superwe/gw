@@ -1,0 +1,31 @@
+﻿.cal{
+	border:1px solid #196AB2;
+	/*
+	width:261px;
+	_width:261px;
+	*/
+	padding:0 5px; 
+    font-family:Arial;background:#DEF0F9 url(bg.gif) repeat-x ; 
+}
+
+.cal a,.cal b{
+	display:block; 
+	float:left;
+	zoom: 1;
+	width:27px;
+	height:20px;
+	line-height:20px; 
+	padding:2px; 
+    background:#DEF0F9;
+	font-size:12px;
+	text-align:center;
+	color:#1668B1;
+	font-family:Arial; 
+    text-decoration:none; 
+	margin:0px 2px; 
+}
+.cal b{background:none;}
+.cal a:hover{background:#A9DAF3;color:#900;font-weight:bold}
+.cal .btn{cursor:pointer;color:#fff; }
+.cal .dateCap{ width:95px;_width:95px;color:#fff;}
+.cal a.selected{background:#A9DAF3;color:#900;font-weight:bold}

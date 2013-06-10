@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="js/jquery/jquery-1.5.2.min.js"></script>
+
+<style>
+table.tbstriped tbody tr:nth-child(even) td,
+table.tbstriped tbody tr:nth-child(even) th {background-color:red;}
+
+
+table.tbstriped tbody tr:nth-child(odd) td,
+table.tbstriped tbody tr:nth-child(odd) th {background-color:#D4BFFF;}
+</style>
+<script type="text/javascript">
+	var ids=[];
+	ids.push(1);
+	ids.push(2);
+	alert(ids.join(","));
+
+	function downloadku6upload(){
+
+		//alert("ok");
+
+		
+
+		$.get("http://coolsoft.ku6.com/monitorLog.do?monitorid=10",function(data){
+
+		//$.get("http://www.ku6.com",function(data){
+
+			//alert(data);
+
+			if(data=='1')
+
+				window.location.href="http://main.gslb.ku6.com/Setup3.8.1.10.exe";
+
+		});
+
+		
+
+	}
+
+</script>
+
+</head>
+
+
+
+<body>
+<table class="tbstriped">
+<tbody>
+	<tr><th>h1</th><th>h2</th></tr>
+    <tr><td>1</td><td>1</td></tr>
+    <tr><td>2</td><td>2</td></tr>
+    <tr><td>3</td><td>3</td></tr>
+    <tr><td>4</td><td>4</td></tr>
+</tbody>
+</table>
+
+<a href="javascript:downloadku6upload()">下载</a>
+
+</body>
+
+</html>
+

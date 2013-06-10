@@ -1,0 +1,63 @@
+/*
+发言的css样式
+add by lisheng
+2013-04-24
+*/
+
+.speakWrap{display: inline-block;width: 602px; padding: 5px 14px 13px 14px;background: #ffffff; border: solid 1px #ddd;}
+.speakWrap .textarea01{
+    text-align: left;
+    background: #fdfdfd;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fbfbfb),to(#ffffff));
+    background: -webkit-linear-gradient(top,#fbfbfb,#ffffff);
+    background: -o-linear-gradient(top,#fbfbfb, #ffffff);
+    background: -moz-linear-gradient(top, #fbfbfb, #ffffff);
+    background: -ms-linear-gradient(top , #fbfbfb, #ffffff);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fbfbfb', endColorstr='#ffffff');
+    border: 1px solid #DCDCDC;
+    border-radius: 3px;
+    width: 95%;
+    min-height: 20px;
+    height: auto;
+    line-height: 20px;
+    box-shadow: 0 1px 0px #F8F8F8 inset;
+    padding: 5px 11px;
+    cursor: text;
+    color: #666;
+}
+.yy-font-num{
+    font-weight: bold; bottom:0px;position:absolute;font-size:24px;
+    right:10px;color:#CCC;opacity:0.5;filter:alpha(opacity:50);
+}
+
+
+/* 动态中发言的  css 样式 */
+.speechdiv{width: 602px;margin-top: 15px; border-bottom: 1px solid #ececec;padding-bottom: 10px; clear: both;}
+.speechdiv img{cursor: pointer;}
+.speechInfo{width: 550px; padding-left: 9px; line-height: 20px;}
+.speechInfo a {cursor: pointer;}
+.speechInfo a.ename{ color: #0178b3;float: left;display: inline-block;}
+.speechInfo a.group{ background: url(../images/group1.png) no-repeat -2px; padding-left: 10px;margin-left:5px;display: inline-block;}
+.speechInfo a.pingbi{background: url(../images/forbi.png) no-repeat ;width: 20px;height: 20px; float: right;display: inline-block;}
+.speechInfo a.secretLogo { background: url(../images/simi_ico.png) no-repeat ; margin-left:5px;width: 10px;height: 10px; display: inline-block;}
+
+div.speechContent { margin-top: 5px; line-height: 22px;font-size: 14px; height: auto;}
+
+/*转发 样式框*/
+.pl-box{border:1px solid #DEDEDE;border-radius:5px;background:#F8F8F8;padding:10px 20px;margin:10px 0px;}
+.ico-pl-sj{background-position:0 0;width:13px;height:10px;position:absolute;top:-10px;left:20px;}
+div.originalSpeechInfo { line-height: 20px; width: 500px;  padding-bottom: 10px;}
+
+div.speechFooter{margin-top: 5px; padding-bottom: 10px; }
+div.timeAndFrom{float:left;color: #b5b5b5; display: inline-block;}
+div.operation {float: right;display: inline-block;}
+div.operation  a{ color:#0178b3; margin: 0 5px; }
+
+
+/*喜欢 收藏 样式*/
+div.likediv{ width: 602px;margin-top: 15px; border-bottom: 1px solid #ececec;padding-bottom: 10px; clear: both; line-height: 22px;}
+div.likeInfo {width: 545px; padding-left: 9px;display: inline-block;}
+
+div.likeDetail { float: left;display: inline-block; width: 450px;overflow: hidden;height: 25px;}
+div.likeDetail a {cursor: pointer;color: #0178b3;}
+a.likeTime {float:right;color: #b5b5b5; display: inline-block;}

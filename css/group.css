@@ -1,0 +1,333 @@
+div.group_content{float:left;clear:both}
+.groupMain{
+	float:left;
+	width:830px;
+	background:#FFFFFF;
+	margin:0px;
+	padding:0px;
+	clear:both
+}
+.groupMainLeft{
+	float:left;
+	width:630px;
+	margin:0px;
+	padding:0px;
+	clear:left;
+}
+.groupMainRight{
+	float:right;
+	width:200px;
+	margin:0px;
+	padding:0px;
+	clear:right;
+}
+.groupMain p {
+	margin:40px;
+}
+.groupMainRight .box{
+	float:left;
+	width:200px;
+	margin-bottom:10px;
+	padding:0px;
+	clear:both;
+}
+.groupMainRight .box p{ 
+	padding: 5px 15px;
+	height: auto;
+	display: block;
+	margin:0px;
+	width: 85%;
+}
+.groupMainRight .box  h1{
+	background: #E2E2E2;
+	color: #FFFFFF;
+	height: 27px;
+	line-height: 27px;
+	border-radius: 0 3px 3px 0;
+	padding: 0 10px;
+}
+.groupMainRight .box  h1 span{
+	float:right;
+	display: inline;
+}
+.groupMainRight .box  h1 span a{
+	color: #7E7E7E;
+	font-weight:normal;
+	font-size:10px;
+}
+.groupMainRight .box h2{
+	font-style: normal;
+	word-wrap: break-word;
+}
+.groupMainRight .box ul li{
+	border-bottom: 1px dashed #C7C7C7;
+	padding: 5px 15px;
+	height: auto;
+	display: block;
+	width: 85%;
+}
+.groupMainRight .box ul.employeeListUl li{
+	height:30px;
+	border-bottom:0px;
+}
+.groupMainRight .box ul li img{
+	width:30px;
+	height:30px;
+}
+.boxLiLeft{
+	float:left;
+	width:40px;
+	height:30px;
+	margin-left:10ppx;
+	clear:left;
+}
+.boxLiRight{
+	float:left;
+	width:120px;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	clear:right;
+}
+table .groupImg{
+	width:60px;
+	height:60px;	
+}
+div.group_wrap div.group_content table thead th{
+    background: #E6E6E6;
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0 10px;
+}
+.creator{
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	margin-left: 720px;
+	margin-top: 10px;
+	line-height: 30px;
+	text-align:center;
+}
+.w50{width:50px}
+.w100{width:100px}
+.w400{width:400px}
+.w500{width:500px}
+input .input {
+	height: 22px;
+	width: 400px;
+}
+textarea.input {
+	width: 400px;
+	height: 100px;
+}
+table{
+	margin:10px;
+}
+table tr{
+	line-height:40px;
+}
+.confirm{
+	background: #13A7D7;
+	background: -webkit-linear-gradient(top,#1CB0E0,#0597C8);
+	color: #fff;
+}
+.group-right{
+	float:right;
+	margin: 0px;
+	padding: 0;
+}
+div.group_header .group-desc{
+	width: 330px;
+	height: 60px;
+	padding: 10px 15px;
+	background: rgba(240, 240, 240, 0.5);
+	position: absolute;
+	text-algin:right;
+	right: 280px;
+	top: 85px;	
+}
+.group-logo{
+	float:right;
+	border: 1px solid #fff;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin-top: -25px;
+	margin-right: 6px;
+	box-shadow: 2px 3px 2px #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	margin: -10px 0px 0px -5px;
+	background-color: #f9f9f9;
+	position: absolute;
+	
+	clear:both
+}
+.group-right .group-set{
+	float:right;
+	padding: 0;
+	text-align:right;
+	height: 30px;
+	width: 70px;
+	margin: 95px 10px 0px 0px;
+	line-height: 30px;
+	position: relative;
+	clear:both;
+}
+.group-homepage{
+	float:right;
+	margin: 95px 10px 0px 0px;
+	padding: 0;
+	text-align:right;
+	position: relative;
+	clear:both;
+}
+.group-homepage a {
+	width:100px;
+}
+.delGroup{
+	float:right;
+}
+div.group_wrap div.group_header ul.tab li a {
+	background: #F6F6F6;
+}
+div.group_wrap div.group_content form.group-setting table tbody td {
+	border-bottom: 0px;
+}
+form#addemployee ul li{
+	line-height:30px;
+}
+a.button_blue{
+	color:#ffffff;
+}
+.group_button{
+	float:left;
+	height: 30px;
+	width: 80px;
+	margin-right: 10px;
+	line-height: 30px;
+}
+form#addemployee input{margin-top:10px}
+.zListOper {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background: url(../images/zsImg.gif) no-repeat -249px -114px;
+	margin-left: 6px;
+}
+/*文件*/
+.fileTop{
+	height:46px;
+	line-height:46px;
+	margin-left: 10px;
+	width: 760px;
+	background: #e6e6e6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
+	background: -moz-linear-gradient(top,  #ffffff,  #e6e6e6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6');
+}
+.fileTop .uploadFileGroup{
+	float: right;
+	display: inline;
+	margin-right:10px;
+}
+.fileTop a:link,.fileTop a:visited{
+	color:#FFFFFF;
+	margin-left:15px;
+}
+.groupUpload{
+	padding: 15px;
+	text-align: left;
+	line-height: 30px;
+}
+.addGroupEmployee{
+	padding: 15px;
+}
+.tkBox {
+	top:20px;
+}
+.tkBox a {
+	display: block;
+	width: 45px;
+}
+.yy-file-op{
+	position:relative;
+}
+.mCreatBox{
+	padding: 5px 15px;
+	margin-right:15px;
+	border-radius:0 5px 0 0;
+	height:110px;
+	border-bottom:solid 1px #dcedf5;
+	background:#fcfdfe;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fcfdfe), to(#f3f8fb));
+	background: -moz-linear-gradient(top,  #fcfdfe,  #f3f8fb);
+	background: -ms-linear-gradient(top , #fcfdfe, #f3f8fb);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfdfe', endColorstr='#f3f8fb')
+}
+.mCreatTitle{
+	font-weight:bold;
+	color:#9b9b9a;
+	left:11px;
+	top:11px;
+}
+.creatList{
+	margin-left:44px;
+}
+.creatList li{
+	float:left;
+	width:79px;
+	height:78px;
+	margin-top:20px;
+	text-align:center;
+}
+.creatList li:hover,.creatList .creatAppCur{
+	background:url(../images/appOperBg.png);
+}
+.creatList li a{
+	color:#767676;
+	display:block;
+	width:100%;
+	height:88%;
+	padding-top:10px;
+}
+.creatList li:hover a,.creatList .creatAppCur a{
+	color:#5399c6;
+}
+.speakIconB,.scheIconB,.taskIconB,.blogIconB,.tpIconB,.activeIconB,.wkIconB{
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../images/appIconBig.png) no-repeat;
+	margin:0 0 7px 26px;
+	*margin:0 0 7px 0px;
+}
+.speakIconB{
+	background-position:0 0
+}
+.scheIconB{
+	background-position:0 -32px
+}
+.taskIconB{
+	background-position:0 -62px;
+}
+.blogIconB{
+	background-position:0 -93px;
+}
+.tpIconB{
+	background-position:0 -122px
+}
+.activeIconB{
+	background-position:0 -152px
+}
+.wkIconB{
+	background-position:0 -181px;
+}
+.feed_div, .bottomMore{
+	float:left;
+	clear:both;
+}
+.bottomMore{
+	width:600px;
+}

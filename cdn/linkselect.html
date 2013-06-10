@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="js/jquery/linkselect/jquery.linkselect-1.5.0.js"></script>
+<link type="text/css" href="js/jquery/linkselect/jquery.linkselect-1.5.0.css" rel="stylesheet"/>
+<link type="text/css" href="js/jquery/linkselect/jquery.linkselect.style.flatbox.css" rel="stylesheet"/>
+<link type="text/css" href="js/jquery/linkselect/jquery.linkselect.style.selectbox.css" rel="stylesheet"/>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $("#flatbox").linkselect({
+			style:'flatbox'
+		});
+		
+		$("#selectbox").linkselect({
+			style:'selectbox'
+		});
+    });
+</script>
+</head>
+
+<body>
+<div >
+<select class="linkselect" id="flatbox">
+<option>菜单以</option>
+		<option>菜单以</option>
+    	<option>菜单以</option>
+		<option>菜单以sdf</option>
+		<option>菜单以</option>
+		<option>菜单以sdfsd</opftion>
+		<option>菜单以sdfd</option>
+
+</select>
+</div>
+<br/>
+<div>
+<select class="linkselect" id="selectbox">
+<option>菜单以</option>
+		<option>菜单以</option>
+    	<option>菜单以</option>
+		<option>菜单以sdf</option>
+		<option>菜单以</option>
+		<option>菜单以sdfsd</opftion>
+		<option>菜单以sdfd</option>
+
+</select>
+</div>
+</body>
+</html>
